@@ -20,3 +20,17 @@ if lift > drag:
     print("Efficient Flight Condition")
 else:
     print("Inefficient Design")
+import matplotlib.pyplot as plt
+
+angles = list(range(0, 16))
+lifts = []
+
+for a in angles:
+    Cl_temp = get_cl_from_angle(a)
+    lifts.append(calculate_lift(velocity, wing_area, Cl_temp))
+
+plt.plot(angles, lifts)
+plt.xlabel("Angle of Attack")
+plt.ylabel("Lift")
+plt.title("Lift vs Angle of Attack")
+plt.show()
