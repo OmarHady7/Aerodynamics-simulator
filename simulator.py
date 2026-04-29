@@ -1,4 +1,5 @@
 from utils import calculate_drag, calculate_lift, get_cl_from_angle
+import matplotlib.pyplot as plt
 
 print("=== Aerodynamics Simulator ===")
 
@@ -20,7 +21,8 @@ if lift > drag:
     print("Efficient Flight Condition")
 else:
     print("Inefficient Design")
-import matplotlib.pyplot as plt
+
+print("\n--- Generating Lift Curve ---\n")
 
 angles = list(range(0, 16))
 lifts = []
